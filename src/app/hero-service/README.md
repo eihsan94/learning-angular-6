@@ -1,12 +1,8 @@
 
 # the thing that we did in this branch
-* 
+* we make a hero service that retrieve heroes data
 
-* 
-
-* 
-
-* 
+* we used observable
 
 # new things that we learn
 ## @injectable decorator
@@ -14,20 +10,5 @@
 
 * HeroService class is going to provide an injectable service, and it can also have its  own injected dependencies. 
 
-```
-@Input() hero: Hero;
-
-```
-
-The Hero property must be an Input property, 
-because the external HeroesComponent will bind to it like this.
-```
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
-
-```
-where
-<app-hero-detail> is hero detail component selector 
-[hero]="selectedHero" is the hero data that is being parsed by heroes component when the heroes are being selected
-
-# in a nut shell
-this hero-details-component work as html template that took selected hero data from heroes component and show the the data through hero-details-component.html 
+## what is provider?
+make the HeroService available to the dependency injection system before Angular can inject it into the HeroesComponent
