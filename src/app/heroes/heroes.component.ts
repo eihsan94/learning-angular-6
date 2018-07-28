@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero-service/hero.service';
 
 
 @Component({
@@ -14,14 +14,20 @@ hero: Hero = {
   name: 'deku',
 };
 selectedHero: Hero;
-heroes = HEROES;
-  constructor() { }
+heroes: Hero[];
+
+constructor(private heroService: HeroService) { } // we are injecting the HeroService to hero component
 
   ngOnInit() {
+    this.getHeroes();
   }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
 
+  getHeroes(): void {
+    this.heroService.getHeroes()
+        .subscribe(heroes => this.heroes = heroes);
+  }
 }
