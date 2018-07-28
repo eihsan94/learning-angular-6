@@ -5,6 +5,8 @@
   </label>
 </div>
 
+<!-- this is being called by the hero details component -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 <!-- testing heroes component with mock data -->
 <h2> mock heroes list test</h2>
@@ -29,7 +31,7 @@
   * currency amounts,
   * dates and other display data.
 Angular ships with several built-in pipes and you can create your own. -->
-<div *ngIf="selectedHero">
+<!-- <div *ngIf="selectedHero">
 
   <h2>{{selectedHero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{selectedHero.id}}</div>
@@ -39,4 +41,4 @@ Angular ships with several built-in pipes and you can create your own. -->
     </label>
   </div>
 
-</div>
+</div> -->
