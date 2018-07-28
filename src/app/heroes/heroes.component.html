@@ -9,7 +9,7 @@
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 <!-- testing heroes component with mock data -->
-<h2> mock heroes list test</h2>
+<h2> Mock heroes list test</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"
   >
