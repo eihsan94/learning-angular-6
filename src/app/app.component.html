@@ -3,8 +3,17 @@
   <h1>
      {{ title }}!
   </h1>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+  </nav>
 </div>
+<!-- using router instead  therefore we can disable the app-heroes selector.
+  The RouterOutlet is one of the router directives that became available to 
+  the AppComponent because AppModule imports AppRoutingModule which exported RouterModule.-->
+<router-outlet></router-outlet>
 <!-- from the message component -->
 <app-messages></app-messages>
 <!-- from the heroes component -->
-<app-heroes></app-heroes> 
+<!-- <app-heroes></app-heroes>  -->
+

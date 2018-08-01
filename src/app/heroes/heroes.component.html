@@ -6,18 +6,18 @@
 </div>
 
 <!-- this is being called by the hero details component -->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- we disable this because it is replavce by routing -->
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 
 <!-- testing heroes component with mock data -->
 <h2> Mock heroes list test</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"
-  >
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-  
-</ul>
-
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+    </li>
+  </ul>
 <!-- <h2>僕のヒーローアカデミア</h2>
 <ul class="heroes">
   <li>
